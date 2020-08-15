@@ -27,7 +27,11 @@ typedef struct node
 
 
 int main (void)
-{    
+{
+    
+    
+    
+    
     node *list = NULL ;
     
     for (int i = 0 ; i < 10 ; i++  )
@@ -42,16 +46,16 @@ int main (void)
         
         
         list = n ;  
+        
+        
+        printf("%i\n" , list->number);
+
         list = list -> next ;
     }
     
 
 
-    for( int i =0  ; i < 10  ; i++  )
-    {
-        printf("%i/n" , list->number);
-        list = list -> next ;
-    } 
+   
     
     
     while(list != NULL)
@@ -61,8 +65,8 @@ int main (void)
         list = tmp ;
         
     }
- 
- 
- 
- 
+  
+    
+    
+    
 }
