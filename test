@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+
+
+
+typedef struct node 
+{ 
+    
+    int number ;
+    struct node *next ;  
+ 
+ 
+
+}node ; 
+
+
+
+
+
+
+
+
+
+
+
+int main (void)
+{    
+    node *list = NULL ;
+    
+    for (int i = 0 ; i < 10 ; i++  )
+    {
+        
+        
+        node *n = malloc(sizeof(node)); 
+        
+    
+        n->number = i ;
+        n->next  = NULL ;
+        
+        
+        list = n ;  
+        list = list -> next ;
+    }
+    
+
+
+    for( int i =0  ; i < 10  ; i++  )
+    {
+        printf("%i/n" , list->number);
+        list = list -> next ;
+    } 
+    
+    
+    while(list != NULL)
+    {
+        node *tmp = list->next ; 
+        free (list);
+        list = tmp ;
+        
+    }
+ 
+ 
+ 
+ 
+}
