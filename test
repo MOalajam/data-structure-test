@@ -11,8 +11,6 @@ typedef struct node
     
     int number ;
     struct node *next ;  
- 
- 
 
 }node ; 
 
@@ -44,18 +42,34 @@ int main (void)
         n->number = i ;
         n->next  = NULL ;
         
+        if(i ==0 )
+        {
+            list = n ;  
+        }
+        else
+        {
+            list = list -> next ;
+        }
         
-        list = n ;  
         
-        
-        printf("%i\n" , list->number);
-
-        list = list -> next ;
+       
     }
     
 
 
-   
+
+
+
+
+    for( int i =0  ; i < 10  ; i++  )
+    {
+
+        printf("%i\n" , list->number);
+        list = list -> next ;
+    } 
+    
+    
+    
     
     
     while(list != NULL)
@@ -67,6 +81,17 @@ int main (void)
     }
   
     
+    
+  
+    
+    
+
+    
+
+  
+    
+    
+  
     
     
 }
